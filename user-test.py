@@ -1,0 +1,26 @@
+import unittest
+from user import User
+
+class UserTest(unittest.TestCase):
+    '''
+    Class for testing the behaviours
+
+    Args:
+        unnitest.TestCase :Test case that assist in the creation.
+    '''
+
+    def setup(self):
+        '''The method above was or is supposed to run before each test case
+        '''
+        self.new_user = ("mark","password")
+
+    def test_save_user(self);
+
+        '''This test case is used to check if the user saves data properly'''
+
+        self.new_user.save_user()
+        self.assertEqual(len(User.user_list),1)
+
+
+if __name__=='__main__':
+    unnitest.main()
