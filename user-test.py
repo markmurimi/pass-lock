@@ -22,6 +22,13 @@ class UserTest(unittest.TestCase):
         self.new_user.save_user()
         self.assertEqual(len(User.user_list),1)
 
+    def test_init_(self):
 
+        '''Test case used to check if user is initialised properly
+        '''
+        self.assertEqual(self.new_user_name, "mark")
+        self.assertEqual(self.new_user.password, "password")
+
+        
 if __name__=='__main__':
     unnitest.main()
