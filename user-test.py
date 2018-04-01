@@ -10,11 +10,12 @@ class UserTest(unittest.TestCase):
     '''
 
     def setup(self):
+
         '''The method above was or is supposed to run before each test case
         '''
         self.new_user = ("mark","password")
 
-    def test_save_user(self);
+    def test_save_user(self):
 
         '''This test case is used to check if the user saves data properly'''
 
