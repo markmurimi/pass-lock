@@ -11,6 +11,12 @@ class CredentialsTest(unittest.TestCase):
 
         self.new_credentials = Credentials("Google","3344")
 
+    def tearDown(self):
+        '''
+         This is the tear down method that does clean up after each test case has run.
+        '''
+        Credentials.credentials_list = []
+
     def test_save_credentials(self):
         
         '''Is the case to test if the credentials are being saved'''
