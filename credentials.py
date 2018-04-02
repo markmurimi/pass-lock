@@ -7,6 +7,13 @@ class Credentials:
     def __init__(self, account_name, account_password):
         self.account_name = account_name
         self.account_password = account_password
+        
+    @classmethod
+    def display_credentials(cls):
+        '''
+        This method displays the current details
+        '''
+        return cls.credentials_list
 
     def save_credentials(self):
         '''The method that saves the credentials on the credentials list'''

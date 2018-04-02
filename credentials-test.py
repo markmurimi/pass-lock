@@ -16,6 +16,14 @@ class CredentialsTest(unittest.TestCase):
          This is the tear down method that does clean up after each test case has run.
         '''
         Credentials.credentials_list = []
+    
+    def test_display_all_credentials(self):
+        '''
+        Test to check if all credentials can be viewed
+        '''
+
+        self.assertEqual(Credentials.display_credentials(),
+        Credentials.credentials_list)
 
     def test_save_credentials(self):
         
