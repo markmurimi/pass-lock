@@ -22,5 +22,5 @@ You can navigate through my app using codes which will be displayed in the app.
 ##### I used Python version 3.6
 ---
 
-### License under [MIT]()
+### License under [MIT](https://github.com/markmurimi/pass-lock/blob/master/LICENSE)
 *  © Mark Murimi ~ 2018
