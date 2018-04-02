@@ -28,6 +28,13 @@ def save_new_credential(credentials):
     credentials.save_credentials()
 
 
+def find_credential(account_name):
+    '''
+    method to find a credential that has been created
+    '''
+
+    return Credentials.find_by_name(account_name)
+
 def display_credential():
     '''
     THis method displays credentials.
@@ -204,8 +211,8 @@ def main():
                 elif choice == '4':
                     while True:
                         print("continue? y/n")
-                        choice = input().lower()
-                        if choice == 'y':
+                        option = input().lower()
+                        if option == 'y':
                             print("*****Enter account name to find credentials*****")
 
                             search_name = input()
@@ -217,7 +224,7 @@ def main():
                                 f"Account Name: {search_credential.account_name}\n Password: {search_credential.account_password}")
                             print("*****Account does not exist *****")
 
-                        elif choice == 'n':
+                        elif option == 'n':
                             break
                         else:
                             print("*****Invalid code*****")
@@ -232,9 +239,6 @@ def main():
 
         elif Code == 'lg':
             print("----- welcome -----")
-            print("----- Enter user name -----")
-            user_name = input()
-
             print("----- Enter user name -----")
             user_name = input()
             print('\n')
@@ -252,5 +256,4 @@ def main():
                         continue
 
 if __name__=='__main__':
-
     main()

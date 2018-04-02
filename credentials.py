@@ -7,7 +7,36 @@ class Credentials:
     def __init__(self, account_name, account_password):
         self.account_name = account_name
         self.account_password = account_password
-        
+
+    @classmethod
+    def find_by_name(cls, account_name):
+        '''
+        a method that takes in a name and returns a credential that matches that name
+        Args:
+            name: account_name that has a password
+        return:
+            the account that matches that name
+        '''
+
+        for credentials in cls.credentials_list:
+            if credentials.account_name == account_name:
+                return credentials
+
+    @classmethod
+    def credential_exists(cls, account_name):
+        '''
+        method to check if credential exists
+        Args:
+            name: account_name to be searched
+        boolean:
+                true or false 
+        '''
+
+        for credentials in cls.credentials_list:
+            if credentials.account_name == account_name:
+                return True
+        return False
+  
     @classmethod
     def display_credentials(cls):
         '''
